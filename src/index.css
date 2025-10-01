@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variáveis CSS para temas */
+:root {
+  --text-primary: 255, 255, 255;
+  --text-secondary: 41, 41, 41;
+  --bg-primary: #3b4e4c;
+  --bg-secondary: #8c5f4f;
+  --bg-linearprimary: #8c5f4f #bfa38a #d9c0a3;
+  --bg-linearsecondary: #8c5f4f #bfa38a #d9c0a3;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+ --text-primary: 41, 41, 41;
+  --text-secondary: 255, 255, 255;
+  --bg-primary: #3b4e4c;
+  --bg-secondary: #8c5f4f;
+  --bg-linearprimary: #8c5f4f #bfa38a #d9c0a3;
+  --bg-linearsecondary: #8c5f4f #bfa38a #d9c0a3;
+}
+
+/* Animações customizadas */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Componentes customizados */
+@layer components {
+  .btn-primary {
+    @apply bg-brand-lightbrown text-white px-4 py-2 rounded-lg font-medium hover:bg-brand-brown focus:outline-none focus:ring-2 focus:ring-brand-lightbrown focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-brand-green rounded-xl shadow-card border border-brand-lightbrown;
+  }
+  
+  .input-primary {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors duration-200;
+  }
+}
+
+/* Utilitários customizados */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-500 to-brand-600 bg-clip-text text-transparent;
+  }
+  
 }

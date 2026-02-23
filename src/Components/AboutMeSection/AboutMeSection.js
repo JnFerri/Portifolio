@@ -18,7 +18,7 @@ const AboutMeSection = (props) => {
 
   return (
     <section  id={id} ref={combinedRef} class={` scroll-mt-[10vh] h-[90dvh] landscape:md:scroll-mt-[15vh] landscape:lg:scroll-mt-[10%] landscape:md:h-[250dvh] landscape:lg:h-[90dvh] lg:scroll-mt-[10%] lg:h-[90dvh] bg-gradient-to-b from-[#3b4e4c] to-[#332214] w-full  flex flex-col items-center justify-between `}>
-      <Typhografy variant="h2" class='text-6xl mt-4 font-primary text-white w-full font-bold text-center' >Sobre Mim</Typhografy>
+      <Typhografy variant="h2" class={`text-6xl mt-4 font-primary text-white w-full font-bold text-center ${isVisible ? "animate-slide-up" : null} `} >Sobre Mim</Typhografy>
       <div class='w-[calc(100%-2rem)] h-full  xl:h-[90%] flex-col lg:flex-row flex items-center lg:justify-between '>
         <div class={`w-[100%] h-full  lg:w-full lg:h-full   ${isVisible ? "animate-slide-up" : null
           }`} isVisible={isVisible} >

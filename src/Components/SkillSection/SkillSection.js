@@ -17,7 +17,7 @@ const SkillSection = (props) => {
 
   return (
     <section id={id} ref={combinedRef} class=' scroll-mt-[10vh] h-auto lg:scroll-mt-[10vh] lg:h-[90vh] bg-brand-strongbrown w-full flex flex-col items-center justify-between' >
-      <Typhografy variant="h2" class='text-6xl mt-4 font-primary text-white w-full font-bold text-center' >Habilidades</Typhografy>
+      <Typhografy variant="h2" class={`text-6xl mt-4 font-primary text-white w-full font-bold text-center ${isVisible ? "animate-slide-up" : null} `} >Habilidades</Typhografy>
       <div class={`w-full h-auto lg:h-[90%] flex flex-col items-center justify-between  `}>
         <div class='flex flex-col lg:flex-row justify-between items-center w-[calc(100%-2rem)] h-auto lg:h-[100%]' >
           <div class='w-[98%] lg:w-[98%] '>

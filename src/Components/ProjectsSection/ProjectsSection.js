@@ -39,7 +39,7 @@ const ProjectsSection = (props) => {
 
   return (
     <section id={id} ref={combinedRef} class={` scroll-mt-[10vh] h-[90vh] md:h-[90dvh] landscape:md:h-[150dvh] landscape:xl:h-[90dvh] landscape:scroll-mt-[15vh] lg:scroll-mt-[10vh] lg:h-[90vh] bg-gradient-to-b from-[#332214] to-[#3b4e4c]  w-full  flex flex-col items-center justify-between`} >
-      <Typhografy variant="h2" class='text-6xl mt-4 font-primary text-white w-full font-bold text-center'>Projetos</Typhografy>
+      <Typhografy variant="h2" class={`text-6xl mt-4 font-primary text-white w-full font-bold text-center ${isVisible ? "animate-slide-up" : null} `}>Projetos</Typhografy>
       <div class={`w-full h-4/5 flex flex-col items-center justify-end `}>
       <div class={`w-full h-full  `}>
       <Carousel3DProjects isVisible={isVisible} class={`w-full h-full `} images={carouselImages} />

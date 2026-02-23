@@ -17,6 +17,22 @@
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      '3xl' : '1919px',
+      '4xl' : '2500px',
+    },
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        DEFAULT: '100%',
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+        '2xl': '100%',
+        '3xl': '100%',
+        '4xl': '100%'
+      },
     },
     
     extend: {
@@ -26,11 +42,15 @@
         brand: {
           lightbrown: '#d9c0a3',
           brown: '#8c5f4f',
+          strongbrown:'#332214',
           green: '#3b4e4c',
           black: '#363535',
           white: '#ededed'
         },
-        
+        screens: {
+      '3xl': '1919px',
+      '4xl': '2500px',
+        },
         // Cores semânticas
         success: {
           lightgreen: '#568f67ff',
@@ -58,7 +78,7 @@
         background: {
           primary: '(var(--bg-primary) / <alpha-value>)',
           secondary: '(var(--bg-secondary) / <alpha-value>)',
-          linearprimary: 'linear-gradient(135deg,var(--bg-linearprimary) / <alpha-value>)',
+          linearprimary: 'linear-gradient(180deg, #3b4e4c, #33243)',
           linearsecondary: 'linear-gradient(135deg,var(--bg-linearsecondary) / <alpha-value>)',
         },
       },
@@ -151,9 +171,9 @@
       
       // 🎭 Animations e Transitions
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.3s ease-out',
-        'slide-down': 'slideDown 0.3s ease-out',
+        'fade-in': 'fadeIn 1.5s ease-in-out',
+        'slide-up': 'slideUp 1.5s ease-out',
+        'slide-down': 'slideDown 0.6s ease-out',
         'bounce-in': 'bounceIn 0.6s ease-out',
         'pulse-slow': 'pulse 3s infinite',
         'spin-slow': 'spin 3s linear infinite',
@@ -213,6 +233,12 @@
           },
           '@screen 2xl': {
             maxWidth: '1536px',
+          },
+          '@screen 3xl': {
+            maxWidth: '1920px',
+          },
+          '@screen 4xl': {
+            maxWidth: '2500px',
           },
         },
       })

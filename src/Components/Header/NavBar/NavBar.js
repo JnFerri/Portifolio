@@ -1,38 +1,35 @@
-import logo from '../../../Assets/Images/logoDev.png'
+
+const NavBar = ({ activeSection, IsMenuScrollTop }) => {
 
 
-
-const NavBar = (props) =>{
   const links = [
     {
-      nome:'home',
-      href:'/'
+      description:'Sobre mim',
+      href:'#sobre'
     },
     {
-      nome:'sobre',
-      href:'/sobre'
+      description:'Habilidades',
+      href:'#habilidades'
     },
     {
-      nome:'contato',
-      href:'/contato'
+      description:'Projetos',
+      href:'#projetos'
     },
+    
     {
-      nome:'login',
-      href:'/login'
+      description:'Contato',
+      href:'#contato'
     }
   ]
 
   return(
-    <nav class='flex items-center justify-between w-full px-8 py-1 m-0 bg-opacity-0'>
-      <div class='bg-white p-8 rounded-full w-32 h-32 flex justify-center items-center' >
-      <img src={logo} class='w-full' />
-      </div>
-      <ul className='flex justify-center items-center w-1/3 '>
+    <nav class='flex items-center justify-between w-[100%] m-2 lg:w-2/4 xl:w-2/4 2xl:w-1/3 bg-opacity-0 z-10'>
+      <ul className='flex justify-between items-center w-full '>
         {
           links.map((link) => {
             return(
-              <li key={link.nome} class=' w-1/4' >
-                <a href={link.href} class='text-brand-white text-xl font-primary font-bold text-center w-full'>{link.nome}</a>
+              <li key={link.description} class=' w-auto lg:w-auto flex items-center' >
+                <a href={link.href} class={`text-brand-white  text-2xl ${IsMenuScrollTop === false ? null : 'text-shadow-lg'}  hover:scale-110 font-primary font-bold text-center w-full ${activeSection === link.href.substring(1) ? 'bg-brand-white rounded-md p-2 text-brand-green'  : ''} `}>{link.description}</a>
               </li>
             )
 

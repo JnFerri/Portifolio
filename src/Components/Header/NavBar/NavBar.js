@@ -29,7 +29,7 @@ const NavBar = ({ activeSection, IsMenuScrollTop }) => {
           links.map((link) => {
             return(
               <li key={link.description} class=' w-auto lg:w-auto flex items-center' >
-                <a href={link.href} class={`text-brand-white  text-2xl ${IsMenuScrollTop === false ? null : 'text-shadow-lg'}  hover:scale-110 font-primary font-bold text-center w-full ${activeSection === link.href.substring(1) ? 'bg-brand-white rounded-md p-2 text-brand-green'  : ''} `}>{link.description}</a>
+                <a href={link.href} class={`text-brand-white  text-2xl ${IsMenuScrollTop === false ? null : 'text-shadow-lg'}  hover:scale-110 font-primary font-bold text-center w-full ${activeSection === link.href.substring(1) ? 'bg-brand-white rounded-md p-2 text-brand-strongbrown'  : ''} `}>{link.description}</a>
               </li>
             )
 

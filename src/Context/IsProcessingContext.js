@@ -7,7 +7,7 @@ const IsProcessingProvider = ({children}) => {
     return (
         <IsProcessingContext.Provider value={[IsProcessing , setIsProcessing]}>
             {children}
-            </IsProcessingContext.Provider>
+        </IsProcessingContext.Provider>
     )
 }
 

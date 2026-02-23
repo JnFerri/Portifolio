@@ -4,6 +4,7 @@ import AboutMeSection from './Components/AboutMeSection/AboutMeSection.js';
 import Header from './Components/Header/Header.js';
 import ProjectsSection from './Components/ProjectsSection/ProjectsSection.js';
 import SkillSection from './Components/SkillSection/SkillSection.js';
+import ContactSection from './Components/ContactSection/ContactSection.js';
 
 
 
@@ -17,6 +18,7 @@ function App() {
      <AboutMeSection id={sections[1]}  setActiveSection={setActiveSection} />
      <SkillSection id={sections[2]}  setActiveSection={setActiveSection} />
      <ProjectsSection id={sections[3]}  setActiveSection={setActiveSection} />
+     <ContactSection id={sections[4]}  setActiveSection={setActiveSection} />
     </div>
     
   );
